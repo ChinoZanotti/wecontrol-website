@@ -1,0 +1,37 @@
+@use "variables";
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: variables.$spacing-md;
+  color: variables.$gris-oscuro;
+}
+
+p {
+  margin-bottom: variables.$spacing-md;
+  line-height: variables.$line-height-base;
+}
+
+a {
+  color: variables.$celeste;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  font-weight: 700; // bold
+}
+
+h2 {
+  font-weight: 600; // semibold
+}
+
+p {
+  font-weight: 400; // regular
+}
+
+strong {
+  font-weight: 500; // medium
+}

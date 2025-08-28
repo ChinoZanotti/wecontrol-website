@@ -1,0 +1,10 @@
+@use "variables";
+@use "mixins";
+
+.btn-primary {
+  @include mixins.button(variables.$celeste, variables.$blanco);
+}
+
+.btn-secondary {
+  @include mixins.button(variables.$blanco, variables.$gris-oscuro);
+}

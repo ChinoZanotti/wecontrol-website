@@ -1,0 +1,15 @@
+@use "variables";
+@use "mixins";
+@use "reset";
+@use "typography";
+@use "layout";
+@use "components";
+
+body {
+    background-color: variables.$celeste;
+    h1 {
+        color: variables.$gris-claro;
+        padding: 20% 0;
+        text-align: center;
+    }
+}
