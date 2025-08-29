@@ -6,10 +6,55 @@
 @use "components";
 
 body {
-    background-color: variables.$celeste;
+    background-color: variables.$blanco;
     h1 {
-        color: variables.$gris-claro;
-        padding: 20% 0;
+        color: variables.$celeste;
+        padding: 60% 0;
         text-align: center;
     }
+}
+
+//Header
+.header {
+    padding: 50px;
+    background-color: variables.$celeste;
+    color: variables.$blanco;
+    transition: padding 0.5s variables.$bouncy;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .mainNavbar {
+        margin: 0 10px;
+
+        li {
+            list-style: none;
+            display: inline-block;
+
+            a {
+                color: variables.$blanco;
+                padding: 10px;
+                display: inline-block;
+                transition: transform 0.5s variables.$bouncy;
+
+                &:hover {
+                    text-decoration: none;
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+    .logo {
+        img {
+            max-height: 50px;
+        }
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    transition: padding 0.5s variables.$bouncy;
 }

@@ -10,8 +10,12 @@
   padding: variables.$spacing-lg 0;
 }
 
-.flex {
+.flex-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
