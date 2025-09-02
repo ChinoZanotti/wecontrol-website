@@ -101,51 +101,124 @@ strong {
   transform: translateY(-5px);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #ffffff;
 }
 body h1 {
-  color: #1B9CDD;
-  padding: 60% 0;
+  color: #ffffff;
+  padding: 20% 0;
   text-align: center;
 }
 
-.header {
-  padding: 50px;
+header {
   background-color: #1B9CDD;
+  border: 30px solid white;
+  border-radius: 70px;
+}
+
+.topBar {
+  padding: 50px;
   color: #ffffff;
   transition: padding 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
 }
-.header .mainNavbar {
+@media (max-width: 576px) {
+  .topBar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 70px;
+    background-color: #1B9CDD;
+    transition: padding 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.337254902));
+  }
+}
+@media (max-width: 576px) {
+  .topBar .btn-white {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .topBar .logo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.topBar .menuIcon {
+  display: none;
+  border: 1px solid #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+@media (max-width: 576px) {
+  .topBar .menuIcon {
+    display: inline-block;
+  }
+}
+
+.mainNavbar {
   margin: 0 10px;
 }
-.header .mainNavbar li {
-  list-style: none;
-  display: inline-block;
+@media (max-width: 576px) {
+  .mainNavbar {
+    display: none;
+  }
 }
-.header .mainNavbar li a {
+.mainNavbar a {
   color: #ffffff;
   padding: 10px;
   display: inline-block;
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.header .mainNavbar li a:hover {
+@media (max-width: 576px) {
+  .mainNavbar a {
+    display: block;
+    text-align: center;
+  }
+}
+.mainNavbar a:hover {
   text-decoration: none;
   transform: translateY(-5px);
 }
-.header .logo img {
+.mainNavbar .mobileMenu {
+  display: none;
+}
+@media (max-width: 576px) {
+  .mainNavbar .mobileMenu {
+    display: block;
+  }
+}
+
+.mainNavbar.menuOpen {
+  display: block;
+}
+
+.logo img {
   max-height: 50px;
 }
 
 .sticky {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  padding: 20px 50px;
+  padding: 20px 70px;
+  background-color: #1B9CDD;
   transition: padding 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.337254902));
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,56 +5,151 @@
 @use "layout";
 @use "components";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: variables.$blanco;
     h1 {
-        color: variables.$celeste;
-        padding: 60% 0;
+        color: variables.$blanco;
+        padding: 20% 0;
         text-align: center;
     }
 }
 
 //Header
-.header {
-    padding: 50px;
+header {
     background-color: variables.$celeste;
+    border: 30px solid white;
+    border-radius: variables.$border-radius;
+}
+
+.topBar {
+    padding: 50px;
     color: variables.$blanco;
     transition: padding 0.5s variables.$bouncy;
+    display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+    @include mixins.respond-to(mobile) {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 70px;
+        background-color: variables.$celeste;
+        transition: padding 0.5s variables.$bouncy;
+        filter: variables.$shadow-light;
+    }
 
-    .mainNavbar {
-        margin: 0 10px;
-
-        li {
-            list-style: none;
-            display: inline-block;
-
-            a {
-                color: variables.$blanco;
-                padding: 10px;
-                display: inline-block;
-                transition: transform 0.5s variables.$bouncy;
-
-                &:hover {
-                    text-decoration: none;
-                    transform: translateY(-5px);
-                }
-            }
+    .btn-white {
+        @include mixins.respond-to(mobile) {
+            display: none;
         }
     }
+
     .logo {
-        img {
-            max-height: 50px;
+        @include mixins.respond-to(mobile) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
         }
+    }
+
+    .menuIcon {
+        display: none;
+        border: 1px solid variables.$blanco;
+        padding: 5px 10px;
+        border-radius: 5px;
+        @include mixins.respond-to(mobile) {
+            display: inline-block;
+        }
+    }
+}
+
+.mainNavbar {
+    margin: 0 10px;
+    @include mixins.respond-to(mobile) {
+        display: none;
+    }
+
+        a {
+            color: variables.$blanco;
+            padding: 10px;
+            display: inline-block;
+            transition: transform 0.5s variables.$bouncy;
+            @include mixins.respond-to(mobile) {
+                display: block;
+                text-align: center;
+            }
+
+            &:hover {
+                text-decoration: none;
+                transform: translateY(-5px);
+            }
+        }
+
+    .mobileMenu {
+        display: none;
+
+        @include mixins.respond-to(mobile) {
+            display: block;
+        }
+    }
+}
+
+.mainNavbar.menuOpen {
+    display: block;
+}
+
+.logo {
+    img {
+        max-height: 50px;
     }
 }
 
 .sticky {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    padding: 20px 50px;
+    padding: 20px 70px;
+    background-color: variables.$celeste;
     transition: padding 0.5s variables.$bouncy;
+    filter: variables.$shadow-light;
 }
+
+// @include mixins.respond-to(mobile) {
+//     .header {
+//         .mainNavbar {
+
+//             .largeMenu {display: none;}
+
+//             .mobileMenu {
+//                 display: block;
+//                 position: absolute;
+//                 right: 0;
+//                 top: 0;
+//             }
+
+//         }
+//         .mainNavbar.responsive {
+//             position: relative;
+        
+//             .largeMenu {
+//                 float: none;
+//                 display: block;
+//                 text-align: left;
+//             }
+//         }
+
+//         .btn-white {display: none;}
+        
+//     }
+// }

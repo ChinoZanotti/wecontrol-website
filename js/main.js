@@ -10,3 +10,13 @@ function stickyHeader() {
         header.classList.remove("sticky");
     }
 }
+
+// Mobile Menu
+function openMobileMenu() {
+  let nav = document.getElementById("topMainNavbar");
+  if (nav.className === "mainNavbar") {
+    nav.className += " menuOpen";
+  } else {
+    nav.className = "mainNavbar";
+  }
+}
