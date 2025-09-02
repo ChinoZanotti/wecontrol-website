@@ -5,6 +5,6 @@
   @include mixins.button(variables.$celeste, variables.$blanco);
 }
 
-.btn-secondary {
+.btn-white {
   @include mixins.button(variables.$blanco, variables.$gris-oscuro);
 }

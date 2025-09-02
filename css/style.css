@@ -14,12 +14,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   color: #212121;
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   line-height: 1.6;
 }
 
@@ -50,7 +50,7 @@ strong {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.25rem;
 }
 
 .section {
@@ -70,27 +70,35 @@ strong {
 .btn-primary {
   background-color: #1B9CDD;
   color: #ffffff;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .btn-primary:hover {
-  background-color: rgb(21.4475806452, 123.9193548387, 175.5524193548);
+  background-color: rgb(24.2237903226, 139.9596774194, 198.2762096774);
+  text-decoration: none;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.337254902));
+  transform: translateY(-5px);
 }
 
-.btn-secondary {
+.btn-white {
   background-color: #ffffff;
   color: #212121;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.btn-secondary:hover {
-  background-color: rgb(229.5, 229.5, 229.5);
+.btn-white:hover {
+  background-color: rgb(242.25, 242.25, 242.25);
+  text-decoration: none;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.337254902));
+  transform: translateY(-5px);
 }
 
 body {
