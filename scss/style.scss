@@ -23,7 +23,7 @@ h1.demo {
 header {
     background-color: variables.$celeste;
     border: 30px solid white;
-    border-radius: variables.$border-radius;
+    border-radius: 70px;
     min-height: 100svh;
     display: flex;
     flex-direction: column;  
@@ -210,4 +210,11 @@ header {
         max-height: 250px;
         width: auto;
     }
+}
+
+//BENEFICIOS
+.beneficios-cards {
+    display: grid;
+    grid: auto / 1fr 1fr 1fr;
+    grid-gap:40px;
 }

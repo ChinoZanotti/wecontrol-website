@@ -33,6 +33,7 @@ a:hover {
 
 h1 {
   font-weight: 700;
+  font-size: 2em;
 }
 
 h2 {
@@ -115,6 +116,25 @@ strong {
   background-color: rgba(0, 0, 0, 0.1411764706);
   text-decoration: none;
   transform: translateY(-5px);
+}
+
+.card {
+  background-color: #F1F3F2;
+  border-radius: 40px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card h4,
+.card p {
+  margin: 0;
+}
+.card svg {
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  stroke: #212121;
 }
 
 html {
@@ -322,6 +342,12 @@ header {
 .hero-media img {
   max-height: 250px;
   width: auto;
+}
+
+.beneficios-cards {
+  display: grid;
+  grid: auto/1fr 1fr 1fr;
+  grid-gap: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

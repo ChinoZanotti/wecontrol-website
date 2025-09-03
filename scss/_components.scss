@@ -12,3 +12,24 @@
 .btn-outlined-white {
   @include mixins.button-outlined(variables.$blanco);
 }
+
+.card {
+  background-color: variables.$gris-claro;
+  border-radius: variables.$border-radius;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h4,
+  p {
+    margin: 0;
+  }
+  
+  svg {
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+    stroke: variables.$gris-oscuro;
+  }
+}
