@@ -11,11 +11,12 @@ html {
 
 body {
     background-color: variables.$blanco;
-    h1 {
-        color: variables.$blanco;
-        padding: 20% 0;
-        text-align: center;
-    }
+}
+
+h1.demo {
+    color: variables.$blanco;
+    padding: 20% 0;
+    text-align: center;
 }
 
 //Header

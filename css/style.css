@@ -108,7 +108,8 @@ html {
 body {
   background-color: #ffffff;
 }
-body h1 {
+
+h1.demo {
   color: #ffffff;
   padding: 20% 0;
   text-align: center;
