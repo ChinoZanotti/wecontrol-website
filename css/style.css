@@ -130,7 +130,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .topBar {
     display: block;
     position: fixed;
@@ -143,12 +143,12 @@ header {
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.337254902));
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .topBar .btn-white {
     display: none;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .topBar .logo {
     display: flex;
     flex-direction: row;
@@ -159,20 +159,27 @@ header {
 }
 .topBar .menuIcon {
   display: none;
-  border: 1px solid #ffffff;
-  padding: 5px 10px;
+  background-color: #ffffff;
+  padding: 5px 10px 6px;
   border-radius: 5px;
+  color: #1B9CDD;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .topBar .menuIcon {
     display: inline-block;
   }
+}
+.topBar .menuIcon svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  stroke: #1B9CDD;
 }
 
 .mainNavbar {
   margin: 0 10px;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .mainNavbar {
     display: none;
   }
@@ -183,7 +190,7 @@ header {
   display: inline-block;
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .mainNavbar a {
     display: block;
     text-align: center;
@@ -196,7 +203,7 @@ header {
 .mainNavbar .mobileMenu {
   display: none;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .mainNavbar .mobileMenu {
     display: block;
   }

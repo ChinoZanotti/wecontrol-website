@@ -34,7 +34,7 @@ header {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    @include mixins.respond-to(mobile) {
+    @include mixins.respond-to(tablet) {
         display: block;
         position: fixed;
         top: 0;
@@ -47,13 +47,13 @@ header {
     }
 
     .btn-white {
-        @include mixins.respond-to(mobile) {
+        @include mixins.respond-to(tablet) {
             display: none;
         }
     }
 
     .logo {
-        @include mixins.respond-to(mobile) {
+        @include mixins.respond-to(tablet) {
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -64,18 +64,26 @@ header {
 
     .menuIcon {
         display: none;
-        border: 1px solid variables.$blanco;
-        padding: 5px 10px;
+        background-color: variables.$blanco;
+        padding: 5px 10px 6px;
         border-radius: 5px;
-        @include mixins.respond-to(mobile) {
+        color: variables.$celeste;
+        @include mixins.respond-to(tablet) {
             display: inline-block;
+        }
+
+        svg {
+            width: 1em;
+            height: 1em;
+            vertical-align: middle;
+            stroke: variables.$celeste;
         }
     }
 }
 
 .mainNavbar {
     margin: 0 10px;
-    @include mixins.respond-to(mobile) {
+    @include mixins.respond-to(tablet) {
         display: none;
     }
 
@@ -84,7 +92,7 @@ header {
             padding: 10px;
             display: inline-block;
             transition: transform 0.5s variables.$bouncy;
-            @include mixins.respond-to(mobile) {
+            @include mixins.respond-to(tablet) {
                 display: block;
                 text-align: center;
             }
@@ -98,7 +106,7 @@ header {
     .mobileMenu {
         display: none;
 
-        @include mixins.respond-to(mobile) {
+        @include mixins.respond-to(tablet) {
             display: block;
         }
     }
@@ -124,32 +132,3 @@ header {
     transition: padding 0.5s variables.$bouncy;
     filter: variables.$shadow-light;
 }
-
-// @include mixins.respond-to(mobile) {
-//     .header {
-//         .mainNavbar {
-
-//             .largeMenu {display: none;}
-
-//             .mobileMenu {
-//                 display: block;
-//                 position: absolute;
-//                 right: 0;
-//                 top: 0;
-//             }
-
-//         }
-//         .mainNavbar.responsive {
-//             position: relative;
-        
-//             .largeMenu {
-//                 float: none;
-//                 display: block;
-//                 text-align: left;
-//             }
-//         }
-
-//         .btn-white {display: none;}
-        
-//     }
-// }
