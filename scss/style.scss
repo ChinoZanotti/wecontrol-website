@@ -133,3 +133,17 @@ header {
     transition: padding 0.5s variables.$bouncy;
     filter: variables.$shadow-light;
 }
+
+//HERO
+.hero-content {
+    text-align: center;
+
+    h1,p {
+        color: variables.$blanco;
+    }
+
+    h1 {
+        font-size: 3em;
+        font-weight: 500;
+    }
+}

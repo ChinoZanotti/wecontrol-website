@@ -8,3 +8,7 @@
 .btn-white {
   @include mixins.button(variables.$blanco, variables.$gris-oscuro);
 }
+
+.btn-outlined-white {
+  @include mixins.button-outlined(variables.$blanco);
+}

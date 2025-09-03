@@ -30,3 +30,20 @@
     transform: translateY(-5px);
   }
 }
+
+@mixin button-outlined($color: variables.$blanco) {
+  color: $color;
+  border: 1px solid $color;
+  padding: variables.$spacing-sm variables.$spacing-md;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.5s variables.$bouncy;
+
+  &:hover {
+    background-color: #00000024;
+    text-decoration: none;
+    transform: translateY(-5px);
+  }
+}

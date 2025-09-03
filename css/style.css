@@ -101,6 +101,22 @@ strong {
   transform: translateY(-5px);
 }
 
+.btn-outlined-white {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.btn-outlined-white:hover {
+  background-color: rgba(0, 0, 0, 0.1411764706);
+  text-decoration: none;
+  transform: translateY(-5px);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -227,6 +243,17 @@ header {
   background-color: #1B9CDD;
   transition: padding 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.337254902));
+}
+
+.hero-content {
+  text-align: center;
+}
+.hero-content h1, .hero-content p {
+  color: #ffffff;
+}
+.hero-content h1 {
+  font-size: 3em;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */
