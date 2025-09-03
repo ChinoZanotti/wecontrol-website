@@ -96,7 +96,7 @@ header {
 
         a {
             color: variables.$blanco;
-            padding: 10px;
+            padding: 10px 20px;
             display: inline-block;
             transition: transform 0.5s variables.$bouncy;
             @include mixins.respond-to(tablet) {
@@ -108,6 +108,12 @@ header {
                 text-decoration: none;
                 transform: translateY(-5px);
             }
+
+            &.active,
+            &[aria-current="true"] {
+                background-color: rgba(255, 255, 255, 0.25);
+                border-radius: 100px;
+            }
         }
 
     .mobileMenu {
@@ -117,10 +123,10 @@ header {
             display: block;
         }
     }
-}
 
-.mainNavbar.menuOpen {
-    display: block;
+    &.menuOpen {
+        display: block;
+    }
 }
 
 .logo {
