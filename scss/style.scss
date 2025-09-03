@@ -24,6 +24,12 @@ header {
     background-color: variables.$celeste;
     border: 30px solid white;
     border-radius: variables.$border-radius;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .topBar {
@@ -132,18 +138,70 @@ header {
     background-color: variables.$celeste;
     transition: padding 0.5s variables.$bouncy;
     filter: variables.$shadow-light;
+    z-index: 100;
 }
 
 //HERO
+#hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .hero-content {
     text-align: center;
+    max-width: 750px;
+    margin: -50px auto 0;
+    text-align: center;
+    z-index: 2;
+    @include mixins.respond-to(tablet) {
+        padding: 0 50px;
+        z-index: inherit;
+        margin: 0 auto;
+    }
 
     h1,p {
         color: variables.$blanco;
+        margin-bottom: 30px;
     }
 
     h1 {
         font-size: 3em;
         font-weight: 500;
+        line-height: 1.2;
+        @include mixins.respond-to(mobile) {
+            font-size: 2em;
+        }
+    }
+}
+
+.hero-cta {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    @include mixins.respond-to(tablet) {
+        flex-direction: column;
+    }
+}
+
+.hero-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1;
+    @include mixins.respond-to(tablet) {
+        display: none;
+    }
+
+    img {
+        max-height: 250px;
+        width: auto;
     }
 }
