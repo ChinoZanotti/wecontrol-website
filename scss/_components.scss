@@ -27,9 +27,11 @@
   }
   
   svg {
-    width: 2em;
-    height: 2em;
+    width: 32px;
+    height: 32px;
     vertical-align: middle;
-    stroke: variables.$gris-oscuro;
+    text-align: center;
+    // stroke: variables.$gris-oscuro;
+    fill: variables.$gris-oscuro;
   }
 }
