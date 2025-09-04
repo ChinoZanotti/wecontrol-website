@@ -229,3 +229,37 @@ header {
         grid-template-columns: 1fr;
     }
 }
+
+//COMO FUNCIONA
+#como-funciona {
+    h1 {
+        text-align: center;
+    }
+}
+
+.como-pasos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:0;
+    text-align: center;
+    @include mixins.respond-to(tablet) {
+        grid-template-columns: 1fr;
+        grid-gap: 40px
+    }
+}
+
+.como-item {
+    padding: 0 60px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    svg {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin: 0;
+    }
+}

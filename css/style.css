@@ -34,6 +34,7 @@ a:hover {
 h1 {
   font-weight: 700;
   font-size: 2.5em;
+  margin-bottom: 50px;
 }
 
 h2 {
@@ -362,6 +363,37 @@ header {
   .beneficios-cards {
     grid-template-columns: 1fr;
   }
+}
+
+#como-funciona h1 {
+  text-align: center;
+}
+
+.como-pasos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .como-pasos {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
+}
+
+.como-item {
+  padding: 0 60px;
+}
+.como-item h1,
+.como-item h2,
+.como-item h3,
+.como-item h4,
+.como-item svg {
+  margin-bottom: 20px;
+}
+.como-item p {
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
