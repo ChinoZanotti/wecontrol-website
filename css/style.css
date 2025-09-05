@@ -374,16 +374,31 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 0;
   text-align: center;
+  position: relative;
+}
+.como-pasos::before {
+  content: "";
+  position: absolute;
+  top: 36px;
+  left: 20%;
+  right: 20%;
+  border-top: 3px dashed #F1F3F2;
+  z-index: 0;
 }
 @media (max-width: 768px) {
   .como-pasos {
     grid-template-columns: 1fr;
     grid-gap: 40px;
   }
+  .como-pasos::before {
+    content: none;
+  }
 }
 
 .como-item {
+  position: relative;
   padding: 0 60px;
+  z-index: 1;
 }
 .como-item h1,
 .como-item h2,

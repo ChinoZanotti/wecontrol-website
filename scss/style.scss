@@ -242,14 +242,32 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap:0;
     text-align: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 36px;
+        left: 20%;
+        right: 20%;
+        border-top: 3px dashed variables.$gris-claro;
+        z-index: 0;
+    }
+
     @include mixins.respond-to(tablet) {
         grid-template-columns: 1fr;
-        grid-gap: 40px
+        grid-gap: 40px;
+
+        &::before {
+            content: none;
+        }
     }
 }
 
 .como-item {
+    position: relative;
     padding: 0 60px;
+    z-index: 1;
 
     h1,
     h2,
