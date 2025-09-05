@@ -9,6 +9,10 @@
   @include mixins.button(variables.$blanco, variables.$gris-oscuro);
 }
 
+.btn-dark {
+  @include mixins.button(variables.$gris-oscuro, variables.$blanco);
+}
+
 .btn-outlined-white {
   @include mixins.button-outlined(variables.$blanco);
 }
@@ -49,4 +53,10 @@
 
     span {opacity: .5;}
   }
+}
+
+.card-dark {
+  background-color: variables.$gris-oscuro;
+  p, h1, h2, h3, h4, span {color: variables.$blanco;}
+  p, span {opacity: .8;}
 }
