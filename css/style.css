@@ -583,6 +583,12 @@ h2.precio span {
   justify-content: space-between;
   gap: clamp(16px, 5vw, 40px);
 }
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .footer-content a {
   color: #ffffff;
   opacity: 0.8;
@@ -617,6 +623,11 @@ h2.precio span {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+@media (max-width: 768px) {
+  .social-links {
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

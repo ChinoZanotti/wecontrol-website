@@ -399,6 +399,11 @@ h2.precio {
     justify-content: space-between;
     gap: clamp(16px, 5vw, 40px);
 
+    @include mixins.respond-to(tablet) {
+        flex-direction: column;
+        text-align: center;
+    }
+
     a {
         color: variables.$blanco;
         opacity: .8;
@@ -434,4 +439,8 @@ h2.precio {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    
+    @include mixins.respond-to(tablet) {
+        justify-content: center;
+    }
 }
