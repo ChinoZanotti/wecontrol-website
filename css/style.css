@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -542,12 +543,28 @@ header {
 .planes-container .card h2 {
   margin: 1em 0;
 }
-.planes-container ul {
-  padding-left: 1rem;
+
+.plan-features {
+  padding-left: 0;
+  margin-left: 0;
   margin-bottom: 1em;
+  list-style: none;
 }
-.planes-container ul li {
+.plan-features li {
   color: #1B9CDD;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.plan-features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 h2.precio span {
