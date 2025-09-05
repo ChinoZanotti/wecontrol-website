@@ -398,9 +398,20 @@ h2.precio {
     flex-direction: row;
     justify-content: space-between;
     gap: clamp(16px, 5vw, 40px);
-    div {
-        background-color: red;
+
+    a {
+        color: variables.$blanco;
+        opacity: .8;
+
+        &:hover {
+            opacity: 1;
+            transition: 1s ease;
+        }
     }
+
+    img, p, h4 {margin-bottom: 1.5rem;}
+
+    li {margin-bottom: .5rem;}
 }
 
 .footer-copyright {
@@ -417,4 +428,10 @@ h2.precio {
 .logo-footer {
     max-width: 150px;
     height: auto;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }

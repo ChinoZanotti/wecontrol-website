@@ -583,8 +583,19 @@ h2.precio span {
   justify-content: space-between;
   gap: clamp(16px, 5vw, 40px);
 }
-.footer-content div {
-  background-color: red;
+.footer-content a {
+  color: #ffffff;
+  opacity: 0.8;
+}
+.footer-content a:hover {
+  opacity: 1;
+  transition: 1s ease;
+}
+.footer-content img, .footer-content p, .footer-content h4 {
+  margin-bottom: 1.5rem;
+}
+.footer-content li {
+  margin-bottom: 0.5rem;
 }
 
 .footer-copyright {
@@ -600,6 +611,12 @@ h2.precio span {
 .logo-footer {
   max-width: 150px;
   height: auto;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
