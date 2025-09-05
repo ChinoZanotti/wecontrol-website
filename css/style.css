@@ -131,12 +131,29 @@ strong {
 .card p {
   margin: 0;
 }
+.card p,
+.card span {
+  color: #4B5563;
+}
 .card svg {
   width: 32px;
   height: 32px;
   vertical-align: middle;
   text-align: center;
   fill: #212121;
+}
+.card .card-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.card .card-user img {
+  height: 48px;
+  width: 48px;
+}
+.card .card-user span {
+  opacity: 0.5;
 }
 
 html {

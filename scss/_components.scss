@@ -13,6 +13,7 @@
   @include mixins.button-outlined(variables.$blanco);
 }
 
+//CARDS
 .card {
   background-color: variables.$gris-claro;
   border-radius: variables.$border-radius;
@@ -22,16 +23,30 @@
   gap: 20px;
 
   h4,
-  p {
-    margin: 0;
-  }
+  p {margin: 0;}
+
+  p,
+  span {color:variables.$gris-medio;}
   
   svg {
     width: 32px;
     height: 32px;
     vertical-align: middle;
     text-align: center;
-    // stroke: variables.$gris-oscuro;
     fill: variables.$gris-oscuro;
+  }
+
+  .card-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+
+    img {
+      height: 48px;
+      width: 48px;
+    }
+
+    span {opacity: .5;}
   }
 }
