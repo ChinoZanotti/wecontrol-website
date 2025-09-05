@@ -34,7 +34,7 @@ a:hover {
 h1 {
   font-weight: 700;
   font-size: 2.5em;
-  margin-bottom: 50px;
+  margin-bottom: 1em;
 }
 
 h2 {
@@ -155,6 +155,7 @@ h1.demo {
 
 #beneficios,
 #como-funciona,
+#conoce,
 #testimonios,
 #planes {
   padding-top: 50px;
@@ -409,6 +410,53 @@ header {
 }
 .como-item p {
   margin: 0;
+}
+
+#conoce h1,
+#conoce p {
+  text-align: center;
+}
+#conoce .infinite-slider {
+  overflow: hidden;
+  position: relative;
+}
+#conoce .track {
+  display: flex;
+  gap: clamp(16px, 2vw, 32px);
+  will-change: transform;
+  animation-name: scroll-x;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#conoce .slide {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+}
+#conoce .slide img {
+  display: block;
+  height: clamp(380px, 45vh, 517px);
+  width: auto;
+  aspect-ratio: 280/517;
+  object-fit: cover;
+}
+#conoce .infinite-slider:hover .track,
+#conoce .infinite-slider:focus-within .track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  #conoce .track {
+    animation: none;
+  }
+}
+
+@keyframes scroll-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--scroll-end, -50%));
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

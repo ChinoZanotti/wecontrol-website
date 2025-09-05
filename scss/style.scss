@@ -21,6 +21,7 @@ h1.demo {
 
 #beneficios,
 #como-funciona,
+#conoce,
 #testimonios,
 #planes {
     padding-top: 50px;
@@ -281,3 +282,53 @@ header {
         margin: 0;
     }
 }
+
+//CONOCÉ LA APP
+#conoce {
+    h1,
+    p {
+        text-align: center;
+    }
+
+    .infinite-slider {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .track {
+        display: flex;
+        gap: clamp(16px, 2vw, 32px);
+        will-change: transform;
+        animation-name: scroll-x;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .slide {
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+
+        img {
+            display: block;
+            height: clamp(380px, 45vh, 517px);
+            width: auto;
+            aspect-ratio: 280 / 517;
+            object-fit: cover;
+        }
+    }
+
+    .infinite-slider:hover .track,
+    .infinite-slider:focus-within .track {
+        animation-play-state: paused;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .track { animation: none; }
+    }
+}
+
+@keyframes scroll-x {
+  from { transform: translateX(0); }
+  to   { transform: translateX(var(--scroll-end, -50%)); }
+}   
