@@ -386,3 +386,35 @@ h2.precio {
         font-weight: 400;
     }
 }
+
+//Footer
+#footer {
+    border: 30px solid white;
+    border-radius: 70px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: clamp(16px, 5vw, 40px);
+    div {
+        background-color: red;
+    }
+}
+
+.footer-copyright {
+    text-align: center;
+    border-top: 1px solid #1b9cdd1f;
+    margin: 0 -50px -50px;
+    padding: 2em;
+
+    span {
+        opacity: .5;
+    }
+}
+
+.logo-footer {
+    max-width: 150px;
+    height: auto;
+}
