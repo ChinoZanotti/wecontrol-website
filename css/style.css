@@ -245,7 +245,6 @@ strong {
   border-radius: 0 0 40px 40px;
   transform: translateY(-20px);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: 1;
 }
 .accordion-panel.active {
   max-height: 500px;
@@ -622,6 +621,12 @@ h2.precio span {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(16px, 5vw, 40px);
+  margin-top: 3em;
+}
+@media (max-width: 768px) {
+  .faq-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 #footer {

@@ -75,7 +75,6 @@
   border-radius: 0 0 variables.$border-radius variables.$border-radius;
   transform: translateY(-20px);
   transition: all 0.5s variables.$bouncy;
-  z-index: 1;
 
   &.active {
     max-height: 500px;

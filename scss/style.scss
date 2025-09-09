@@ -384,6 +384,11 @@ h2.precio {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: clamp(16px, 5vw, 40px);
+    margin-top: 3em;
+
+    @include mixins.respond-to(tablet) {
+        grid-template-columns: 1fr;
+    }
 }
 
 //Footer
