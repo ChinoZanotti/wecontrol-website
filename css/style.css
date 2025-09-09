@@ -85,6 +85,14 @@ strong {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .btn-primary {
   background-color: #1B9CDD;
   color: #ffffff;
@@ -626,6 +634,41 @@ h2.precio span {
 @media (max-width: 768px) {
   .faq-content {
     grid-template-columns: 1fr;
+  }
+}
+
+.card-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 5vw, 40px);
+}
+@media (max-width: 768px) {
+  .card-body {
+    grid-template-columns: 1fr;
+  }
+}
+.card-body div {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 5vw, 40px);
+  justify-content: end;
+}
+
+#cta .card {
+  gap: clamp(30px, 10vw, 80px);
+}
+#cta .card h1 {
+  font-weight: 300;
+  padding-bottom: 10%;
+}
+@media (max-width: 768px) {
+  #cta .card h1 {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 768px) {
+  #cta .card p {
+    text-align: left;
   }
 }
 

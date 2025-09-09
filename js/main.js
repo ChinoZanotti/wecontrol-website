@@ -65,22 +65,6 @@ function openMobileMenu() {
   })();
 
 //Accordion
-// let acc = document.getElementsByClassName("accordion");
-
-// for ( i = 0; i < acc.length; i++ ) {
-//   acc[i].addEventListener("click", function() {
-//     this.classList.toggle("active");
-//     let panel = this.nextElementSibling;
-//     if (panel.style.display === "block") {
-//       panel.style.display = "none";
-//       panel.style.transform = "translateY(-50%)"
-//     } else {
-//       panel.style.display = "block";
-//       panel.style.transform = "translateY(0)"
-//     }
-//   })
-// }
-
 let acc = document.getElementsByClassName("accordion");
 
 for (let i = 0; i < acc.length; i++) {

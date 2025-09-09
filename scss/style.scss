@@ -391,6 +391,45 @@ h2.precio {
     }
 }
 
+//CTA
+.card-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(16px, 5vw, 40px);
+
+    @include mixins.respond-to(tablet) {
+        grid-template-columns: 1fr;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(16px, 5vw, 40px);
+        justify-content: end;
+    }
+}
+
+#cta {
+    .card {
+        gap: clamp(30px, 10vw, 80px);
+
+        h1 {
+            font-weight: 300;
+            padding-bottom: 10%;
+
+            @include mixins.respond-to(tablet) {
+                padding-bottom: 0;
+            }
+        }
+
+        p {
+            @include mixins.respond-to(tablet) {
+                text-align: left;
+            }
+        }
+    }
+}
+
 //Footer
 #footer {
     border: 30px solid white;
