@@ -647,7 +647,7 @@ h2.precio span {
     grid-template-columns: 1fr;
   }
 }
-.card-body div {
+.card-body .card-body-col {
   display: flex;
   flex-direction: column;
   gap: clamp(16px, 5vw, 40px);
@@ -669,6 +669,11 @@ h2.precio span {
 @media (max-width: 768px) {
   #cta .card p {
     text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  #cta .card a {
+    display: block;
   }
 }
 

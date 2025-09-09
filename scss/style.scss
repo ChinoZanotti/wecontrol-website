@@ -401,7 +401,7 @@ h2.precio {
         grid-template-columns: 1fr;
     }
 
-    div {
+    .card-body-col {
         display: flex;
         flex-direction: column;
         gap: clamp(16px, 5vw, 40px);
@@ -426,6 +426,12 @@ h2.precio {
             @include mixins.respond-to(tablet) {
                 text-align: left;
             }
+        }
+
+        a {
+            @include mixins.respond-to(tablet) {
+                display: block;
+            }  
         }
     }
 }
