@@ -19,11 +19,7 @@ h1.demo {
     text-align: center;
 }
 
-#beneficios,
-#como-funciona,
-#conoce,
-#testimonios,
-#planes {
+.sectionPad {
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -285,10 +281,6 @@ header {
 
 //CONOCÉ LA APP
 #conoce {
-    h1,
-    p {
-        text-align: center;
-    }
 
     .infinite-slider {
         overflow: hidden;

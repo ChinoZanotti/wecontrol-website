@@ -81,6 +81,10 @@ strong {
   flex-direction: column;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .btn-primary {
   background-color: #1B9CDD;
   color: #ffffff;
@@ -213,11 +217,7 @@ h1.demo {
   text-align: center;
 }
 
-#beneficios,
-#como-funciona,
-#conoce,
-#testimonios,
-#planes {
+.sectionPad {
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -472,10 +472,6 @@ header {
   margin: 0;
 }
 
-#conoce h1,
-#conoce p {
-  text-align: center;
-}
 #conoce .infinite-slider {
   overflow: hidden;
   position: relative;
