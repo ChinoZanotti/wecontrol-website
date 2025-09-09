@@ -49,3 +49,40 @@
     transform: translateY(-5px);
   }
 }
+
+@mixin accordion($bg: variables.$celeste, $color: variables.$gris-oscuro){
+  background-color: $bg;
+  color: $color;
+  cursor: pointer;
+  padding: 40px 35px;
+  border-radius: variables.$border-radius;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+  font-weight: 500;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+
+  svg {
+    margin-right: 1em;
+    transition: transform 0.3s variables.$bouncy;
+  }
+
+  &.active,
+  &:hover {
+    background-color: color.adjust($bg, $lightness: -10%);
+  }
+
+  &.active{
+    border-radius: variables.$border-radius variables.$border-radius 0 0;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}

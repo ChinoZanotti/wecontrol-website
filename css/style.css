@@ -203,6 +203,56 @@ strong {
   opacity: 0.8;
 }
 
+.accordion-main {
+  background-color: #1B9CDD;
+  color: #212121;
+  cursor: pointer;
+  padding: 40px 35px;
+  border-radius: 40px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1em;
+  font-weight: 500;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.accordion-main svg {
+  margin-right: 1em;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.accordion-main.active, .accordion-main:hover {
+  background-color: rgb(21.4475806452, 123.9193548387, 175.5524193548);
+}
+.accordion-main.active {
+  border-radius: 40px 40px 0 0;
+}
+.accordion-main.active svg {
+  transform: rotate(180deg);
+}
+
+.accordion-panel {
+  padding: 10px 35px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: #F1F3F2;
+  border-radius: 0 0 40px 40px;
+  transform: translateY(-20px);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1;
+}
+.accordion-panel.active {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -566,6 +616,12 @@ header {
 h2.precio span {
   font-size: 0.5em;
   font-weight: 400;
+}
+
+.faq-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 5vw, 40px);
 }
 
 #footer {

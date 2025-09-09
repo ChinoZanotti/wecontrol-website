@@ -60,3 +60,26 @@
   p, h1, h2, h3, h4, span {color: variables.$blanco;}
   p, span {opacity: .8;}
 }
+
+//ACCORDION
+.accordion-main {
+  @include mixins.accordion(variables.$celeste, variables.$gris-oscuro);
+}
+
+.accordion-panel {
+  padding: 10px 35px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background-color: variables.$gris-claro;
+  border-radius: 0 0 variables.$border-radius variables.$border-radius;
+  transform: translateY(-20px);
+  transition: all 0.5s variables.$bouncy;
+  z-index: 1;
+
+  &.active {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

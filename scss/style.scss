@@ -379,6 +379,13 @@ h2.precio {
     }
 }
 
+//Preguntas Frecuentes
+.faq-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(16px, 5vw, 40px);
+}
+
 //Footer
 #footer {
     border: 30px solid white;
