@@ -26,7 +26,7 @@ h1.demo {
 
 //Header
 header {
-    background-color: variables.$celeste;
+    background-color: variables.$gris-oscuro;
     border: 30px solid white;
     border-radius: 70px;
     min-height: 100svh;
@@ -53,7 +53,7 @@ header {
         left: 0;
         width: 100%;
         padding: 20px 70px;
-        background-color: variables.$celeste;
+        background-color: variables.$gris-oscuro;
         transition: padding 0.5s variables.$bouncy;
         filter: variables.$shadow-light;
     }
@@ -79,7 +79,7 @@ header {
         background-color: variables.$blanco;
         padding: 5px 10px 6px;
         border-radius: 5px;
-        color: variables.$celeste;
+        color: variables.$gris-oscuro;
         @include mixins.respond-to(tablet) {
             display: inline-block;
         }
@@ -88,7 +88,7 @@ header {
             width: 1em;
             height: 1em;
             vertical-align: middle;
-            stroke: variables.$celeste;
+            stroke: variables.$gris-oscuro;
         }
     }
 }
@@ -146,7 +146,7 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 70px;
-    background-color: variables.$celeste;
+    background-color: variables.$gris-oscuro;
     transition: padding 0.5s variables.$bouncy;
     filter: variables.$shadow-light;
     z-index: 100;

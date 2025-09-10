@@ -63,8 +63,10 @@
 
 //ACCORDION
 .accordion-main {
-  @include mixins.accordion(variables.$celeste, variables.$blanco);
+  @include mixins.accordion(variables.$gris-oscuro, variables.$blanco);
 }
+
+
 
 .accordion-panel {
   padding: 10px 35px;
