@@ -25,7 +25,7 @@ p {
 }
 
 a {
-  color: #1B9CDD;
+  color: #212121;
   text-decoration: none;
 }
 a:hover {
@@ -94,7 +94,7 @@ strong {
 }
 
 .btn-primary {
-  background-color: #1B9CDD;
+  background-color: #212121;
   color: #ffffff;
   padding: 0.5rem 1.25rem;
   border-radius: 100px;
@@ -105,7 +105,7 @@ strong {
   text-align: center;
 }
 .btn-primary:hover {
-  background-color: rgb(24.2237903226, 139.9596774194, 198.2762096774);
+  background-color: rgb(20.25, 20.25, 20.25);
   text-decoration: none;
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.337254902));
   transform: translateY(-5px);
@@ -212,8 +212,8 @@ strong {
 }
 
 .accordion-main {
-  background-color: #1B9CDD;
-  color: #212121;
+  background-color: #212121;
+  color: #ffffff;
   cursor: pointer;
   padding: 40px 35px;
   border-radius: 40px;
@@ -235,7 +235,7 @@ strong {
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .accordion-main.active, .accordion-main:hover {
-  background-color: rgb(21.4475806452, 123.9193548387, 175.5524193548);
+  background-color: rgb(7.5, 7.5, 7.5);
 }
 .accordion-main.active {
   border-radius: 40px 40px 0 0;
@@ -280,7 +280,7 @@ h1.demo {
 }
 
 header {
-  background-color: #1B9CDD;
+  background-color: #212121;
   border: 30px solid white;
   border-radius: 70px;
   min-height: 100svh;
@@ -309,7 +309,7 @@ header {
     left: 0;
     width: 100%;
     padding: 20px 70px;
-    background-color: #1B9CDD;
+    background-color: #212121;
     transition: padding 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.337254902));
   }
@@ -333,7 +333,7 @@ header {
   background-color: #ffffff;
   padding: 5px 10px 6px;
   border-radius: 5px;
-  color: #1B9CDD;
+  color: #212121;
 }
 @media (max-width: 768px) {
   .topBar .menuIcon {
@@ -344,7 +344,7 @@ header {
   width: 1em;
   height: 1em;
   vertical-align: middle;
-  stroke: #1B9CDD;
+  stroke: #212121;
 }
 
 .mainNavbar {
@@ -397,7 +397,7 @@ header {
   left: 0;
   width: 100%;
   padding: 20px 70px;
-  background-color: #1B9CDD;
+  background-color: #212121;
   transition: padding 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.337254902));
   z-index: 100;
@@ -604,7 +604,7 @@ header {
   list-style: none;
 }
 .plan-features li {
-  color: #1B9CDD;
+  color: #212121;
   position: relative;
   padding-left: 28px;
   margin-bottom: 12px;

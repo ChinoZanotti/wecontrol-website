@@ -63,7 +63,7 @@
 
 //ACCORDION
 .accordion-main {
-  @include mixins.accordion(variables.$celeste, variables.$gris-oscuro);
+  @include mixins.accordion(variables.$celeste, variables.$blanco);
 }
 
 .accordion-panel {
