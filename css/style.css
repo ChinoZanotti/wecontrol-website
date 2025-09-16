@@ -279,6 +279,13 @@ h1.demo {
   padding-bottom: 50px;
 }
 
+#beneficios,
+#como-funciona,
+#testimonios,
+#planes {
+  scroll-margin-top: 100px;
+}
+
 header {
   background-color: #212121;
   border: 30px solid white;
