@@ -345,7 +345,7 @@ header {
         flex-direction: column;
         justify-content: space-between;
 
-        h2 {margin: 1em 0;}
+        h2 {margin: 1em 0 0;}
     }
 }
 
@@ -377,6 +377,10 @@ h2.precio {
         font-size: .5em;
         font-weight: 400;
     }
+}
+
+p.precio--obs {
+    margin-bottom: 2em;
 }
 
 //Preguntas Frecuentes

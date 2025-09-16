@@ -594,7 +594,7 @@ header {
   justify-content: space-between;
 }
 .planes-container .card h2 {
-  margin: 1em 0;
+  margin: 1em 0 0;
 }
 
 .plan-features {
@@ -623,6 +623,10 @@ header {
 h2.precio span {
   font-size: 0.5em;
   font-weight: 400;
+}
+
+p.precio--obs {
+  margin-bottom: 2em;
 }
 
 .faq-content {
