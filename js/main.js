@@ -95,6 +95,7 @@ for (let i = 0; i < acc.length; i++) {
 }
 
 // --- Active Nav Item ---
+// --- Altura real del header (compensa sticky, márgenes, etc.)
 function getHeaderOffset() {
   const header = document.getElementById("mainHeader");
   if (!header) return 0;
@@ -104,92 +105,99 @@ function getHeaderOffset() {
     + parseFloat(styles.marginBottom);
 }
 
-const nav = document.getElementById("topMainNavbar");
-if (nav) {
+(function initActiveNavStable() {
+  const nav = document.getElementById("topMainNavbar");
+  if (!nav) return;
+
+  // Links del navbar que apuntan a anclas
   const navLinks = Array.from(nav.querySelectorAll('a[href^="#"]'));
 
-  const sectionMap = navLinks
+  const rawMap = navLinks
     .map(a => {
-      const id = a.getAttribute('href').slice(1);
-      const section = document.getElementById(id);
+      let id = a.getAttribute('href').slice(1);
+      let section = document.getElementById(id);
+      if (section && section.tagName === 'BODY') {
+        const hero = document.getElementById('hero');
+        if (hero) { id = 'hero'; section = hero; } else { return null; }
+      }
       return section ? { id, link: a, section } : null;
     })
     .filter(Boolean);
+
+  const byId = new Map();
+  rawMap.forEach(item => { if (!byId.has(item.id)) byId.set(item.id, item); });
+  const sections = Array.from(byId.values());
 
   function setActiveSection(idToActivate) {
     navLinks.forEach(a => {
       const isActive = a.getAttribute('href') === `#${idToActivate}`;
       a.classList.toggle('active', isActive);
-      if (isActive) {
-        a.setAttribute('aria-current', 'true');
-      } else {
-        a.removeAttribute('aria-current');
-      }
+      if (isActive) a.setAttribute('aria-current', 'true');
+      else a.removeAttribute('aria-current');
     });
+    history.replaceState(null, '', `#${idToActivate}`);
   }
 
-  (function initActiveNav() {
-    // Fallback si no hay IntersectionObserver
-    if (!('IntersectionObserver' in window)) {
-      window.addEventListener('scroll', legacyScrollHandler, { passive: true });
-      legacyScrollHandler();
-      return;
-    }
-
+  let ticking = false;
+  let lastActiveId = null;
+  let lastSwitchY = 0;        
+  const bufferPx = 14;       
+  function computeActiveFromCenterline() {
     const headerOffset = getHeaderOffset();
 
-    const observer = new IntersectionObserver(handleIntersections, {
-      root: null,
-      rootMargin: `-${headerOffset + 1}px 0px -50% 0px`,
-      threshold: [0, 0.25, 0.5, 0.75, 1],
-    });
+    const probeY = headerOffset + Math.min(320, window.innerHeight * 0.33);
 
-    sectionMap.forEach(({ section }) => observer.observe(section));
+    let current = null;
+    for (const item of sections) {
+      const rect = item.section.getBoundingClientRect();
+      if (rect.top <= probeY && rect.bottom > probeY) {
+        current = item;
+        break;
+      }
+    }
 
-    function handleIntersections(entries) {
-      const visible = entries
-        .filter(e => e.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-      if (visible.length) {
-        const best = visible[0].target.id;
-        setActiveSection(best);
-        // Evita scroll jump: actualiza el hash sin mover la página
-        history.replaceState(null, '', `#${best}`);
-      } else {
-        const nearest = getNearestSectionToViewportTop();
-        if (nearest) {
-          setActiveSection(nearest.id);
-          history.replaceState(null, '', `#${nearest.id}`);
+    if (!current) {
+      let minDist = Infinity;
+      for (const item of sections) {
+        const rect = item.section.getBoundingClientRect();
+        const dist = Math.min(
+          Math.abs(rect.top - probeY),
+          Math.abs(rect.bottom - probeY)
+        );
+        if (dist < minDist) {
+          minDist = dist;
+          current = item;
         }
       }
     }
 
-    function getNearestSectionToViewportTop() {
-      let winner = null;
-      let minDistance = Infinity;
-      sectionMap.forEach(({ id, section }) => {
-        const rect = section.getBoundingClientRect();
-        const distance = Math.abs(rect.top - headerOffset);
-        if (distance < minDistance) {
-          minDistance = distance;
-          winner = { id, section };
-        }
+    if (!current) return;
+
+    const currentTop = current.section.getBoundingClientRect().top;
+    const switchedEnough = Math.abs(currentTop - lastSwitchY) > bufferPx;
+
+    if (current.id !== lastActiveId && switchedEnough) {
+      lastActiveId = current.id;
+      lastSwitchY = currentTop;
+      setActiveSection(current.id);
+    }
+
+    document.documentElement
+      .style.setProperty('--header-h', `${headerOffset}px`);
+  }
+
+  function onScrollOrResize() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(() => {
+        computeActiveFromCenterline();
+        ticking = false;
       });
-      return winner;
     }
-  })();
-
-  // Fallback legacy
-  function legacyScrollHandler() {
-    const headerOffset = getHeaderOffset();
-    let currentId = sectionMap[0]?.id;
-
-    for (const { id, section } of sectionMap) {
-      const top = section.getBoundingClientRect().top - headerOffset;
-      if (top <= 0) currentId = id;
-      else break;
-    }
-    if (currentId) setActiveSection(currentId);
   }
-}
+
+  // Init + listeners
+  computeActiveFromCenterline();
+  window.addEventListener('scroll', onScrollOrResize, { passive: true });
+  window.addEventListener('resize', onScrollOrResize, { passive: true });
+})();
