@@ -503,6 +503,11 @@ p.precio--obs {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+
+    img {
+        width: 21px;
+        height: 22px;
+    }
     
     @include mixins.respond-to(tablet) {
         justify-content: center;
