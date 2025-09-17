@@ -451,6 +451,7 @@ p.precio--obs {
 #footer {
     border: 30px solid white;
     border-radius: 70px;
+    color: variables.$blanco;
 }
 
 .footer-content {
@@ -476,7 +477,10 @@ p.precio--obs {
 
     img, p, h4 {margin-bottom: 1.5rem;}
 
-    li {margin-bottom: .5rem;}
+    li {
+        margin-bottom: .5rem;
+        list-style: none;
+    }
 }
 
 .footer-copyright {
