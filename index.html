@@ -31,6 +31,7 @@
                         </svg>
                     </a>
                 </div>
+                <!-- MENU DE NAVEGACIÓN -->
                 <div class="mainNavbar" id="topMainNavbar">
                     <a href="#top" class="active">Inicio</a>
                     <a href="#beneficios">Beneficios</a>
@@ -40,6 +41,7 @@
                     <a href="#planes" class="mobileMenu">Descarga la app</a>
                 </div>
                 <div>
+                    <!-- BOTÓN DE CONTACTO POR WHATSAPP -->
                     <a 
                         href="https://wa.me/595971517111?text=Hola%2C%20quiero%20solicitar%20una%20instalaci%C3%B3n" 
                         target="_blank" 
@@ -151,6 +153,8 @@
                     Visualizá tu vehículo, configurá alertas y accedé al historial, todo desde la palma de tu mano.
                 </p>
             </div>
+            
+            <!-- CARRUSEL DE IMAGENES DE LA APP -->
             <div class="infinite-slider" aria-live="off">
                 <ul class="track" id="conoce-track">
                     <li class="slide">
@@ -501,6 +505,15 @@
             </div>
             <div class="footer-copyright"><span>© 2025 We Control. Todos los derechos reservados.</span></div>
         </section>
+
+        <script>
+            window.addEventListener("load", () => {
+                window.scrollTo(0, 0);
+            });
+            if ("scrollRestoration" in history) {
+                history.scrollRestoration = "manual";
+            }
+        </script>
 
         <script src="./js/main.js"></script>
     </body>

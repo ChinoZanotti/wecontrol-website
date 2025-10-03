@@ -201,3 +201,9 @@ function getHeaderOffset() {
   window.addEventListener('scroll', onScrollOrResize, { passive: true });
   window.addEventListener('resize', onScrollOrResize, { passive: true });
 })();
+
+//Forzar #top al inicio
+if (!location.hash) {
+  window.scrollTo(0, 0);
+  history.replaceState(null, '', '#top');
+}
