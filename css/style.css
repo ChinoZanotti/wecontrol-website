@@ -211,6 +211,16 @@ strong {
   opacity: 0.8;
 }
 
+.card-blue {
+  background-color: #1B9CDD;
+}
+.card-blue p, .card-blue h1, .card-blue h2, .card-blue h3, .card-blue h4, .card-blue span {
+  color: #ffffff;
+}
+.card-blue p, .card-blue span {
+  opacity: 0.8;
+}
+
 .accordion-main {
   background-color: #212121;
   color: #ffffff;
@@ -625,6 +635,16 @@ header {
   transform: translateY(-50%);
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+.planes-2col {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+@media (max-width: 768px) {
+  .planes-2col {
+    grid-column-end: 2;
+  }
 }
 
 h2.precio span {

@@ -379,6 +379,15 @@ header {
     }
 }
 
+.planes-2col {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    @include mixins.respond-to(tablet) {
+        grid-column-end: 2;
+    }
+}
+
 h2.precio {
     span {
         font-size: .5em;

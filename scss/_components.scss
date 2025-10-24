@@ -61,6 +61,12 @@
   p, span {opacity: .8;}
 }
 
+.card-blue {
+  background-color: variables.$celeste;
+  p, h1, h2, h3, h4, span {color: variables.$blanco;}
+  p, span {opacity: .8;}
+}
+
 //ACCORDION
 .accordion-main {
   @include mixins.accordion(variables.$gris-oscuro, variables.$blanco);
